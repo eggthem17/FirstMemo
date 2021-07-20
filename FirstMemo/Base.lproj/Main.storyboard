@@ -103,7 +103,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Memo" id="UMf-AS-AGN">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="J1T-PY-PaB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="J1T-PY-PaB">
+                            <connections>
+                                <action selector="close:" destination="LhI-CF-RZv" id="et3-2f-10b"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ALQ-AN-CeO"/>
                     </navigationItem>
                 </viewController>
