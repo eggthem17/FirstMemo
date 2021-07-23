@@ -31,6 +31,14 @@ class MemoListTableViewController: UITableViewController {
 //        print(#function)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) {
+            if let vc = segue.destination as? DetailViewController {
+                vc.data = Memo.dummyMemoList[indexPath.row]
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
