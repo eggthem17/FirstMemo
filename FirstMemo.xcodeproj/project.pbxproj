@@ -17,6 +17,7 @@
 		5B95967626A2D60100A88600 /* FirstMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B95967426A2D60100A88600 /* FirstMemo.xcdatamodeld */; };
 		5B95967826A2D60300A88600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B95967726A2D60300A88600 /* Assets.xcassets */; };
 		5B95967B26A2D60300A88600 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B95967926A2D60300A88600 /* LaunchScreen.storyboard */; };
+		5BBCD85526AAA3DF009415B6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBCD85426AAA3DF009415B6 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5B95967726A2D60300A88600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B95967A26A2D60300A88600 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B95967C26A2D60300A88600 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBCD85426AAA3DF009415B6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				5B2041A326A5B65B00F6CACB /* MemoListTableViewController.swift */,
 				5B5BAE9A26A7124400FC679E /* ComposeViewController.swift */,
 				5B5BAE9C26A71E7E00FC679E /* UIViewController+Alert.swift */,
+				5BBCD85426AAA3DF009415B6 /* DetailViewController.swift */,
 			);
 			path = FirstMemo;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				5B95966E26A2D60100A88600 /* SceneDelegate.swift in Sources */,
 				5B2041A226A5B1C400F6CACB /* Model.swift in Sources */,
 				5B5BAE9D26A71E7E00FC679E /* UIViewController+Alert.swift in Sources */,
+				5BBCD85526AAA3DF009415B6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

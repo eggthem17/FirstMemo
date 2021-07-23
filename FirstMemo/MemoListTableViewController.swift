@@ -16,19 +16,19 @@ class MemoListTableViewController: UITableViewController {
         return formatted
     }()
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        tableView.reloadData()
-//        print(#function)
-    }
-    
     var token: NSObjectProtocol?
     
     deinit {
         if let token = token {
             NotificationCenter.default.removeObserver(token)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        tableView.reloadData()
+//        print(#function)
     }
     
     override func viewDidLoad() {
