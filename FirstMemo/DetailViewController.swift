@@ -54,7 +54,7 @@ extension DetailViewController: UITableViewDataSource {
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
             
-            cell.textLabel?.text = formatter.string(for: data?.date)
+            cell.textLabel?.text = formatter.string(for: data?.insertDate)
             
             return cell
         default:
