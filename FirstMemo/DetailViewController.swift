@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var memoTableView: UITableView!
     var data: Memo?
     
     let formatter: DateFormatter = {
@@ -19,10 +20,26 @@ class DetailViewController: UIViewController {
         return formatted
     }()
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination.children.first as? ComposeViewController {
+            vc.editTarget = data
+        }
+    }
+    
+    var token: NSObjectProtocol?
+    
+    deinit {
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        token = NotificationCenter.default.addObserver(forName: ComposeViewController.memoUpdated, object: nil, queue: OperationQueue.main, using: { [weak self] (noti) in
+            self?.memoTableView.reloadData()
+        })
     }
     
 
