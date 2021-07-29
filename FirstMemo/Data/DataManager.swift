@@ -21,11 +21,11 @@ class DataManager {
     var memoList = [Memo]()
     
     func fetchMemo() {
-        let request: NSFetchRequest<Memo> = Memo.fetchRequest()
-        
+        let request: NSFetchRequest = Memo.fetchRequest()
+
         let sortByDateDesc = NSSortDescriptor(key: "insertDate", ascending: false)
         request.sortDescriptors = [sortByDateDesc]
-        
+
         do {
             memoList = try mainContext.fetch(request)
         } catch  {
