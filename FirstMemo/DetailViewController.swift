@@ -12,6 +12,22 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var memoTableView: UITableView!
     var data: Memo?
     
+    @IBAction func deleteMemo(_ sender: Any) {
+        let alert = UIAlertController(title: "Delete", message: "Delete this memo", preferredStyle: .alert)
+        let allowBtn = UIAlertAction(title: "Delete", style: .destructive) { [weak self] (action) in
+            DataManager.shared.deleteMemo(self?.data)
+            self?.navigationController?.popViewController(animated: true)
+        }
+        let cancelBtn = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        alert.addAction(allowBtn)
+        alert.addAction(cancelBtn)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+    
+    
     let formatter: DateFormatter = {
         let formatted = DateFormatter()
         formatted.dateStyle = .long

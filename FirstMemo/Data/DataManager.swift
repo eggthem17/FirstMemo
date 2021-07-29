@@ -33,6 +33,13 @@ class DataManager {
         }
     }
     
+    func deleteMemo(_ memo: Memo?) {
+        if let memo = memo {
+            DataManager.shared.mainContext.delete(memo)
+            saveContext()
+        }
+    }
+    
     func addNewMemo(_ memo: String?) {
         let newMemo = Memo(context: mainContext)
         newMemo.content = memo
