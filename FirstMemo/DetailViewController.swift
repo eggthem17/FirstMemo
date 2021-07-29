@@ -27,6 +27,15 @@ class DetailViewController: UIViewController {
         
     }
     
+    @IBAction func share(_ sender: Any) {
+        
+        guard let memo = data?.content else {
+            return
+        }
+        let vc = UIActivityViewController(activityItems: [memo], applicationActivities: nil)
+        present(vc, animated: true, completion: nil)
+    }
+    
     
     let formatter: DateFormatter = {
         let formatted = DateFormatter()
