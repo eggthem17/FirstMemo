@@ -36,7 +36,6 @@ class DetailViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    
     let formatter: DateFormatter = {
         let formatted = DateFormatter()
         formatted.dateStyle = .long
